@@ -17,6 +17,11 @@ module.exports = {
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'public'),
+    port: 3001,
+    allowedHosts: [
+      'isaiasdevlog.com',
+      'code.isaiasdevlog.com',
+    ],
     hot: true,
   },
   plugins: [
