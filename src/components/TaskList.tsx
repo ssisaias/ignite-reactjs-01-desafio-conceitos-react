@@ -23,7 +23,7 @@ export function TaskList() {
         title: newTaskTitle,
         isComplete: false
       }
-      setTasks([ _task, ...tasks])
+      setTasks([ ...tasks, _task])
       setNewTaskTitle('');
     }
   }
@@ -42,6 +42,7 @@ export function TaskList() {
   function handleRemoveTask(id: number) {
     // Remova uma task da listagem pelo ID
     let _task = tasks.find(t => t.id === id);
+    
     if (_task) {
       const index = tasks.indexOf(_task);
       tasks.splice(index,1)
